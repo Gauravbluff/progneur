@@ -1,0 +1,40 @@
+<section class="padd40 hideD">
+    <div class="container-fluid width90">
+          <div class="row">
+                
+                <div class="col-12">
+                      <div class="characters w-100">
+                        <div class="d-flex">
+                            
+                            <div class="col-12 col-sm-12 col-md-6"  >
+                                <ngx-slick-carousel class="carousel" 
+                                #slickModal="slick-carousel" 
+                                [config]="slideConfig" 
+                                (init)="slickInit($event)"
+                                (breakpoint)="breakpoint($event)"
+                                (afterChange)="afterChange($event)"
+                                (beforeChange)="beforeChange($event)">
+                <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                    <div class="col-12 col-sm-12 col-md-18"  >
+                    <h2>{{slide.l1}}</h2>
+                    <p>{{slide.l2}}</p></div>
+                    <div class="col-12 col-sm-12 col-md-6"  >
+                                  <!-- <img src="{{slide.img}}"> -->
+                            </div> 
+                </div>
+            </ngx-slick-carousel>
+                                  
+                            </div>
+                            <!-- <div class="col-12 col-sm-12 col-md-6"  ngxSlickItem *ngFor="let slide of Slides"  class="slide">
+                                  <img src="{{slide.img}}">
+                            </div> -->
+                     
+                           
+                        </div>
+                           
+                      </div>
+                </div>
+
+          </div>
+    </div>
+</section>
